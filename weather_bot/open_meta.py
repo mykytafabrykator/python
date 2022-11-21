@@ -47,7 +47,7 @@ def getResult(dic: dict) -> list:
     return res
 
 
-def main(city):
+def main(city: str) -> list:
     '''Main function'''
     loc = getLocation(city)
     if loc == '404':
