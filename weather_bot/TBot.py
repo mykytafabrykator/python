@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 from aiogram import Bot, Dispatcher, executor, types
 from config import TOKEN
 import open_meta
