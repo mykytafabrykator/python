@@ -1,0 +1,6 @@
+pip install pipenv
+mkdir project_name
+cd project_name
+pipenv install geocoder
+pipenv install aiogram
+pipenv shell
