@@ -1,0 +1,16 @@
+{% extends 'main/base.html' %}
+{% block title %}
+    {{ article.title }}}
+{% endblock title %}
+{% block body %}
+    <div class="features">
+        <h1>{{ article.title }}</h1>
+        <p>{{ article.date }}</p>
+        <p>{{ article.full_text }}</p>
+        {% if user.username == 'mykyta' %}
+        <a href="{% url 'news_update' article.id %}" class="btn btn-info">Update</a>
+        <a href="{% url 'news_delete' article.id %}" class="btn btn-danger">Delete</a>
+        {% endif %}
+        <a href="{% url 'news_home' %}"><button class="own-btn">Return back</button></a>
+    </div>
+{% endblock body %}

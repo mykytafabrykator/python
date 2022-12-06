@@ -1,0 +1,11 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block title %}
+    Main
+{% endblock title %}
+{% block body %}
+    <div class="features">
+        <h1>{{ title }}</h1>
+        <img src="{% static 'main/img/keoa.png' %}">
+    </div>
+{% endblock body %}

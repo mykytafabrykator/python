@@ -1,0 +1,19 @@
+{% extends 'main/base.html' %}
+{% block title %}
+    Search certificate
+{% endblock title %}
+{% block body %}
+<div class="features">
+    <h1>Certificates search</h1>
+    <form action="" method="POST">
+    {% csrf_token %}
+    <label for="site-search">Search:</label>
+    <input type="search" id="site-search" name="q" required placeholder="Enter ID">
+
+    <button class="btn btn-success" type="submit">Get it!</button>
+    {% if error == 'An error happenned' %}
+    <h4>No result</h4>
+    {% endif %}
+    </form>
+</div>
+{% endblock body %}

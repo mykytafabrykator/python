@@ -1,0 +1,24 @@
+{% extends 'main/base.html' %}
+{% block title %}
+    Contacts
+{% endblock title %}
+{% block body %}
+    <div class="features">
+        <h1>{{ title }}</h1>
+    </div>
+    {% if contact %}
+    {% for el in contact %}
+        <div class="container">
+            <p>Email: {{ el.email }}</p>
+            <p>Telegram: {{ el.telegram }}</p>
+            <p>Phone number: {{ el.phone_number }}</p>
+        </div>
+        <br>
+    {% endfor %}
+    {% else %}
+        <p> No info </p>
+    {% endif %}
+    {% if user.username == 'mykyta' %}
+    <a href="{% url 'contact_create' %}"><button class="btn btn-info">Add a new contact</button></a>
+    {% endif %}
+{% endblock body %}
